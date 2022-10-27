@@ -1,9 +1,7 @@
 # rover_bot
 ---
 
-![rover_bot](https://github.com/samuko-things/rover_bot/blob/main/rover_bot_pics1.png)
-
-![rover_bot video](https://github.com/samuko-things/rover_bot/blob/main/rover_bot_vid1.mp4)
+[![rover_bot](https://github.com/samuko-things/rover_bot/blob/main/rover_bot_pics1.png)](https://github.com/samuko-things/rover_bot/blob/main/rover_bot_vid1.mp4 "rover_bot")
 
 ```
 clone (git clone git@github.com:samuko-things/mobo_bot.git) or Download
