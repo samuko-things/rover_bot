@@ -15,8 +15,6 @@ find_package(std_msgs REQUIRED)
 # Install launch files.
 install(DIRECTORY
     config
-    meshes
-    # params
     description
     launch
     # world
