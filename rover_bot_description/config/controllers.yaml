@@ -1,0 +1,68 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100 #Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # joint_state_controller:
+    #   type: joint_state_controller/JointStateController
+
+    position_controller:
+      type: position_controllers/JointGroupPositionController
+
+    velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    effort_controller:
+      type: effort_controllers/JointGroupEffortController
+
+
+
+position_controller:
+  ros__parameters:
+    joints:
+      - left_rocker_front_servo_hinge_joint
+      - right_rocker_front_servo_hinge_joint
+      - left_boggie_servo_hinge_joint
+      - right_boggie_servo_hinge_joint
+
+    command_interfaces:
+      - position
+
+    state_interfaces:
+      - position
+
+
+
+velocity_controller:
+  ros__parameters:
+    joints:
+      - left_rocker_front_wheel_joint
+      - right_rocker_front_wheel_joint
+      - left_rocker_rear_wheel_joint
+      - right_rocker_rear_wheel_joint
+      - left_boggie_wheel_joint
+      - right_boggie_wheel_joint
+
+    command_interfaces:
+      - velocity
+
+    state_interfaces:
+      - position
+      - velocity
+
+
+
+effort_controller:
+  ros__parameters:
+    joints:
+      - left_rocker_joint
+      - right_rocker_joint
+      - boggie_joint
+
+    command_interfaces:
+      - effort
+
+    state_interfaces:
+      - position
