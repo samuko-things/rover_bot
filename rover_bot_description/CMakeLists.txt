@@ -17,7 +17,7 @@ install(DIRECTORY
     config
     description
     launch
-    # world
+    world
     DESTINATION share/${PROJECT_NAME}/
 )
 

@@ -38,8 +38,8 @@ def generate_launch_description():
     params = {'robot_description': robot_description_doc.toxml()}
 
 
-    # world_file_name = 'terrain_1.world'
-    # world_path = os.path.join(pkg_path, 'world', world_file_name)
+    world_file_name = 'rover_terrain.world'
+    world_path = os.path.join(pkg_path, 'world', world_file_name)
 
 
     node_robot_state_publisher = Node(
@@ -120,11 +120,11 @@ def generate_launch_description():
             default_value='True',
             description='Use sim time if true'),
         
-        # DeclareLaunchArgument(
-        #     'world',
-        #     default_value=world_path,
-        #     description='SDF world file',
-        # ),
+        DeclareLaunchArgument(
+            'world',
+            default_value=world_path,
+            description='SDF world file',
+        ),
 
         # define the process by which controllers would be loaded
         RegisterEventHandler(
