@@ -38,7 +38,7 @@ def generate_launch_description():
     params = {'robot_description': robot_description_doc.toxml()}
 
 
-    world_file_name = 'rover_terrain.world'
+    world_file_name = 'rover_terrain1.world'
     world_path = os.path.join(pkg_path, 'world', world_file_name)
 
 

@@ -86,7 +86,7 @@
       <elevation>0</elevation>
       <heading_deg>0</heading_deg>
     </spherical_coordinates>
-    <model name='rover_test_terrain1'>
+    <model name='rover_terrain'>
       <link name='link_0'>
         <inertial>
           <mass>200</mass>
@@ -100,7 +100,7 @@
           </inertia>
           <pose>0 0 0 0 -0 0</pose>
         </inertial>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>-0 0 0 0 -0 0</pose>
         <gravity>1</gravity>
         <self_collide>0</self_collide>
         <kinematic>0</kinematic>
@@ -109,7 +109,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/samuko/model_editor_models/rover_terrain/media/rover_terrain.dae</uri>
+              <uri>/home/samuko/model_editor_models/rover_terrain1.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -132,7 +132,7 @@
           <pose>0 0 0 0 -0 0</pose>
           <geometry>
             <mesh>
-              <uri>/home/samuko/model_editor_models/rover_terrain/media/rover_terrain.dae</uri>
+              <uri>/home/samuko/model_editor_models/rover_terrain1.dae</uri>
               <scale>1 1 1</scale>
             </mesh>
           </geometry>
@@ -185,13 +185,13 @@
       </link>
       <static>0</static>
       <allow_auto_disable>1</allow_auto_disable>
-      <pose>-0.529068 0.000568 0 0 -0 0</pose>
+      <pose>0.335102 -0.019055 0 0 -0 0</pose>
     </model>
     <state world_name='default'>
-      <sim_time>70 603000000</sim_time>
-      <real_time>70 805088420</real_time>
-      <wall_time>1666957922 947614162</wall_time>
-      <iterations>70603</iterations>
+      <sim_time>67 803000000</sim_time>
+      <real_time>68 191240575</real_time>
+      <wall_time>1666962581 672265794</wall_time>
+      <iterations>67803</iterations>
       <model name='ground_plane'>
         <pose>0 0 0 0 -0 0</pose>
         <scale>1 1 1</scale>
@@ -202,14 +202,14 @@
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
-      <model name='rover_test_terrain1'>
-        <pose>-0.529068 0.000568 6e-06 0 -1.2e-05 0</pose>
+      <model name='rover_terrain'>
+        <pose>0.335102 -0.019055 -1e-06 1e-06 6e-06 0</pose>
         <scale>1 1 1</scale>
         <link name='link_0'>
-          <pose>-0.529068 0.000568 6e-06 0 -1.2e-05 0</pose>
+          <pose>0.335102 -0.019055 -1e-06 1e-06 6e-06 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>2.3e-05 -4e-06 -5.80355 -1.82557 -0.854856 -3.14158</acceleration>
-          <wrench>0.004524 -0.000877 -1160.71 0 -0 0</wrench>
+          <acceleration>6.4e-05 -1.7e-05 8.39401 2.04717 -1.0579 -3.14156</acceleration>
+          <wrench>0.012826 -0.003463 1678.8 0 -0 0</wrench>
         </link>
       </model>
       <light name='sun'>
@@ -218,7 +218,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>2.40495 -5.69278 5.49953 -0 0.867642 1.73619</pose>
+        <pose>3.09524 -5.83328 4.69701 0 0.651643 2.0282</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>

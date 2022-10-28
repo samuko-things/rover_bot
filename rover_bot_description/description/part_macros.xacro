@@ -170,6 +170,29 @@
 
 
 
+    <xacro:macro name="insert_stopper_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.05 0.02"/>
+            </geometry>
+            <material name="grey"/>
+        </visual>
+        
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.1 0.05 0.02"/>
+            </geometry>
+        </collision>
+
+        <xacro:inertial_box mass="0.2" x="0.1" y="0.05" z="0.02">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </xacro:macro>
+
+
+
 
 
 

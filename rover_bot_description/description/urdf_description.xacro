@@ -72,7 +72,7 @@
     <xacro:arg name="laser_visual" default="false"/>
     <xacro:arg name="imu_visual"   default="true"/>
     <xacro:arg name="sonar_visual"   default="false"/>
-    <xacro:arg name="cam_visual"   default="true"/>
+    <xacro:arg name="cam_visual"   default="false"/>
 
 
     <xacro:include filename="$(find rover_bot_description)/description/inertia_macros.xacro"/>
@@ -169,6 +169,29 @@
     <gazebo reference="left_rocker_link">
         <material>Gazebo/DarkGrey</material>
     </gazebo>
+
+    <!--  ########################### -->
+
+
+
+
+
+
+    <!-- LEFT ROCKER STOPPER LINK -->
+
+    <!-- <joint name="left_rocker_stopper_joint" type="fixed">
+        <parent link="chassis_link"/>
+        <child link="left_rocker_stopper_link"/>
+        <origin xyz="${(rocker_length/2)-0.025} ${(chassis_width/2)+rocker_clearance} 0.05" rpy="0 0 0"/>
+    </joint>
+
+    <link name="left_rocker_stopper_link">
+        <xacro:insert_stopper_link/>
+    </link>
+
+    <gazebo reference="left_rocker_stopper_link">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo> -->
 
     <!--  ########################### -->
 
@@ -350,6 +373,24 @@
     <gazebo reference="right_rocker_link">
         <material>Gazebo/DarkGrey</material>
     </gazebo>
+
+    <!--  ########################### -->
+
+    <!-- LEFT ROCKER STOPPER LINK -->
+
+    <!-- <joint name="right_rocker_stopper_joint" type="fixed">
+        <parent link="chassis_link"/>
+        <child link="right_rocker_stopper_link"/>
+        <origin xyz="${(rocker_length/2)-0.02} ${-1*((chassis_width/2)+rocker_clearance)} 0.05" rpy="0 0 0"/>
+    </joint>
+
+    <link name="right_rocker_stopper_link">
+        <xacro:insert_stopper_link/>
+    </link>
+
+    <gazebo reference="right_rocker_stopper_link">
+        <material>Gazebo/DarkGrey</material>
+    </gazebo> -->
 
     <!--  ########################### -->
 

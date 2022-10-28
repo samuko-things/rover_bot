@@ -18,6 +18,11 @@ to spawn robot in gazebo:
 $ ros2 launch rover_bot_description spawn.launch.py
 ```
 
+to spawn robot in gazebo with a test terrain:
+```shell
+$ ros2 launch rover_bot_description spawn_with_terrain.launch.py
+```
+
 to spawn robot in gazebo and view in RVIZ simultaneously (although with some transorm issues):
 ```shell
 $ ros2 launch rover_bot_description spawn_and_view.launch.py
