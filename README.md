@@ -1,26 +1,27 @@
 # rover_bot
 ---
 
-[![rover_bot](https://github.com/samuko-things/rover_bot/blob/main/rover_bot_pics1.png)](https://github.com/samuko-things/rover_bot/blob/main/rover_bot_vid1.mp4 "rover_bot")
-
 ```
 clone (git clone git@github.com:samuko-things/mobo_bot.git) or Download
 the repo or in your ROS2 workspace, build, and source it.
 ```
 ## Basic Launch
-to view robot in RVIZ:
-```shell
-$ ros2 launch rover_bot_description view.launch.py
-```
+![rover_bot](https://github.com/samuko-things/rover_bot/blob/main/rover_bot_pics1.png)
 
 to spawn robot in gazebo:
 ```shell
 $ ros2 launch rover_bot_description spawn.launch.py
 ```
+![rover_bot](https://github.com/samuko-things/rover_bot/blob/main/rover_bot_pics2.png)
 
 to spawn robot in gazebo with a test terrain:
 ```shell
 $ ros2 launch rover_bot_description spawn_with_terrain.launch.py
+```
+
+to view robot in RVIZ:
+```shell
+$ ros2 launch rover_bot_description view.launch.py
 ```
 
 to spawn robot in gazebo and view in RVIZ simultaneously (although with some transorm issues):
