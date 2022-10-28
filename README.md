@@ -2,6 +2,10 @@
 ---
 
 ```
+this is a six drive wheel robot with a rocker-bogie mechanism.
+It has it own drive controller and can climb rough uneven terrain
+easily
+
 clone (git clone git@github.com:samuko-things/mobo_bot.git) or Download
 the repo or in your ROS2 workspace, build, and source it.
 ```
