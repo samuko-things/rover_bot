@@ -44,15 +44,13 @@
 
 
 
-    <!-- WHEEL PARAMETERS -->
+
+
+
     <xacro:macro name="gazebo_wheel_settings" params="name">
         <gazebo reference="${name}">
             <mu1>1.0</mu1>
             <mu2>1.0</mu2>
-            <!-- <kp>${kp}</kp> -->
-            <!-- <kd>${kd}</kd> -->
-            <!-- <fdir1>${fdir}</fdir1> -->
-            <!-- <minDepth>${minDepth}</minDepth> -->
             <material>Gazebo/FlatBlack</material>
         </gazebo>
     </xacro:macro>
@@ -83,31 +81,12 @@
 
 
 
-
-
-
-
-    <!-- BASE LINK -->
-
-    <!-- <base joint/> -->
     <link name="base_link">  
     </link>
 
-    <!-- ################# -->
 
 
 
-
-
-
-
-
-
-
-
-
-
-    <!-- CHASSIS LINK -->
 
     <joint name="chassis_joint" type="fixed">
         <parent link="base_link"/>
@@ -134,26 +113,10 @@
         <material>Gazebo/White</material>
     </gazebo>
 
-    <!--  ########################### -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- LEFT ROCKER LINK -->
 
     <joint name="left_rocker_joint" type="continuous">
         <parent link="chassis_link"/>
@@ -170,48 +133,10 @@
         <material>Gazebo/DarkGrey</material>
     </gazebo>
 
-    <!--  ########################### -->
 
 
 
 
-
-
-    <!-- LEFT ROCKER STOPPER LINK -->
-
-    <!-- <joint name="left_rocker_stopper_joint" type="fixed">
-        <parent link="chassis_link"/>
-        <child link="left_rocker_stopper_link"/>
-        <origin xyz="${(rocker_length/2)-0.025} ${(chassis_width/2)+rocker_clearance} 0.05" rpy="0 0 0"/>
-    </joint>
-
-    <link name="left_rocker_stopper_link">
-        <xacro:insert_stopper_link/>
-    </link>
-
-    <gazebo reference="left_rocker_stopper_link">
-        <material>Gazebo/DarkGrey</material>
-    </gazebo> -->
-
-    <!--  ########################### -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- LEFT ROCKER FRONT SERVO HINGE LINK -->
 
     <joint name="left_rocker_front_servo_hinge_joint" type="revolute">
         <parent link="left_rocker_link"/>
@@ -227,12 +152,10 @@
 
     <xacro:gazebo_hinge_color name="left_rocker_front_servo_hinge_link"/>
 
-    <!--  ########################### -->
 
 
 
 
-    <!-- LEFT ROCKER FRONT WHEEL LINK -->
 
     <joint name="left_rocker_front_wheel_joint" type="continuous">
         <parent link="left_rocker_front_servo_hinge_link"/>
@@ -247,6 +170,10 @@
     </link>
 
     <xacro:gazebo_wheel_settings name="left_rocker_front_wheel_link"/>
+
+
+
+
 
 
     <joint name="left_rocker_front_wheel_rim_joint" type="fixed">
@@ -264,25 +191,9 @@
     </gazebo>
 
 
-    <!--  ########################### -->
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- LEFT ROCKER REAR SERVO HINGE LINK -->
 
     <joint name="left_rocker_rear_servo_hinge_joint" type="fixed">
         <parent link="left_rocker_link"/>
@@ -296,13 +207,11 @@
 
     <xacro:gazebo_hinge_color name="left_rocker_rear_servo_hinge_link"/>
 
-    <!--  ########################### -->
 
 
 
 
 
-    <!-- LEFT ROCKER REAR WHEEL LINK -->
 
     <joint name="left_rocker_rear_wheel_joint" type="continuous">
         <parent link="left_rocker_rear_servo_hinge_link"/>
@@ -316,6 +225,11 @@
     </link>
 
     <xacro:gazebo_wheel_settings name="left_rocker_rear_wheel_link"/>
+
+
+
+
+
 
 
     <joint name="left_rocker_rear_wheel_rim_joint" type="fixed">
@@ -332,32 +246,10 @@
         <material>Gazebo/Red</material>
     </gazebo>
 
-    <!--  ########################### -->
 
 
 
 
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- RIGHT ROCKER LINK -->
 
     <joint name="right_rocker_joint" type="continuous">
         <parent link="chassis_link"/>
@@ -374,47 +266,10 @@
         <material>Gazebo/DarkGrey</material>
     </gazebo>
 
-    <!--  ########################### -->
-
-    <!-- LEFT ROCKER STOPPER LINK -->
-
-    <!-- <joint name="right_rocker_stopper_joint" type="fixed">
-        <parent link="chassis_link"/>
-        <child link="right_rocker_stopper_link"/>
-        <origin xyz="${(rocker_length/2)-0.02} ${-1*((chassis_width/2)+rocker_clearance)} 0.05" rpy="0 0 0"/>
-    </joint>
-
-    <link name="right_rocker_stopper_link">
-        <xacro:insert_stopper_link/>
-    </link>
-
-    <gazebo reference="right_rocker_stopper_link">
-        <material>Gazebo/DarkGrey</material>
-    </gazebo> -->
-
-    <!--  ########################### -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- RIGHT ROCKER FRONT SERVO HINGE LINK -->
 
     <joint name="right_rocker_front_servo_hinge_joint" type="revolute">
         <parent link="right_rocker_link"/>
@@ -430,13 +285,10 @@
 
     <xacro:gazebo_hinge_color name="right_rocker_front_servo_hinge_link"/>
 
-    <!--  ########################### -->
 
 
 
 
-
-    <!-- RIGHT ROCKER FRONT WHEEL LINK -->
 
     <joint name="right_rocker_front_wheel_joint" type="continuous">
         <parent link="right_rocker_front_servo_hinge_link"/>
@@ -450,6 +302,11 @@
     </link>
 
     <xacro:gazebo_wheel_settings name="right_rocker_front_wheel_link"/>
+
+
+
+
+
 
 
     <joint name="right_rocker_front_wheel_rim_joint" type="fixed">
@@ -466,33 +323,16 @@
         <material>Gazebo/Red</material>
     </gazebo>
 
-    <!--  ########################### -->
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- RIGHT ROCKER REAR SERVO HINGE LINK -->
 
     <joint name="right_rocker_rear_servo_hinge_joint" type="fixed">
         <parent link="right_rocker_link"/>
         <child link="right_rocker_rear_servo_hinge_link"/>
         <origin xyz="${-1*((rocker_length/2)-0.025)} 0 -0.01" rpy="0 0 ${pi}"/>
-        <!-- <origin xyz="-0.145 0 -0.01" rpy="0 0 ${pi}"/> -->
     </joint>
 
     <link name="right_rocker_rear_servo_hinge_link">
@@ -501,14 +341,10 @@
 
     <xacro:gazebo_hinge_color name="right_rocker_rear_servo_hinge_link"/>
 
-    <!--  ########################### -->
 
 
 
 
-
-
-    <!-- RIGHT ROCKER REAR WHEEL LINK -->
 
     <joint name="right_rocker_rear_wheel_joint" type="continuous">
         <parent link="right_rocker_rear_servo_hinge_link"/>
@@ -522,6 +358,10 @@
     </link>
 
     <xacro:gazebo_wheel_settings name="right_rocker_rear_wheel_link"/>
+
+
+
+
 
 
     <joint name="right_rocker_rear_wheel_rim_joint" type="fixed">
@@ -538,37 +378,15 @@
         <material>Gazebo/Red</material>
     </gazebo>
 
-    <!--  ########################### -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- BOGGIE LINK -->
 
     <joint name="boggie_joint" type="continuous">
         <parent link="chassis_link"/>
         <child link="boggie_link"/>
         <origin xyz="${-1*(rocker_length-0.05)} 0 0" rpy="0 0 0"/>
-        <!-- <origin xyz="-0.27 0 -0.01" rpy="0 0 0"/> -->
         <axis xyz="1 0 0"/>
     </joint>
 
@@ -580,31 +398,10 @@
         <material>Gazebo/DarkGrey</material>
     </gazebo>
 
-    <!--  ########################### -->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- LEFT BOGGIE SERVO HINGE LINK -->
 
     <joint name="left_boggie_servo_hinge_joint" type="revolute">
         <parent link="boggie_link"/>
@@ -620,12 +417,11 @@
 
     <xacro:gazebo_hinge_color name="left_boggie_servo_hinge_link"/>
 
-    <!--  ########################### -->
 
 
 
 
-    <!-- LEFT BOGGIE WHEEL LINK -->
+
 
     <joint name="left_boggie_wheel_joint" type="continuous">
         <parent link="left_boggie_servo_hinge_link"/>
@@ -639,6 +435,10 @@
     </link>
 
     <xacro:gazebo_wheel_settings name="left_boggie_wheel_link"/>
+
+
+
+
 
 
     <joint name="left_boggie_wheel_rim_joint" type="fixed">
@@ -655,33 +455,11 @@
         <material>Gazebo/Red</material>
     </gazebo>
 
-    <!--  ########################### -->
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- RIGHT BOGGIE SERVO HINGE LINK -->
 
     <joint name="right_boggie_servo_hinge_joint" type="revolute">
         <parent link="boggie_link"/>
@@ -697,11 +475,9 @@
 
     <xacro:gazebo_hinge_color name="right_boggie_servo_hinge_link"/>
 
-    <!--  ########################### -->
 
 
 
-    <!-- RIGHT BOGGIE WHEEL LINK -->
 
     <joint name="right_boggie_wheel_joint" type="continuous">
         <parent link="right_boggie_servo_hinge_link"/>
@@ -715,6 +491,9 @@
     </link>
 
     <xacro:gazebo_wheel_settings name="right_boggie_wheel_link"/>
+
+
+
 
 
     <joint name="right_boggie_wheel_rim_joint" type="fixed">
@@ -731,15 +510,9 @@
         <material>Gazebo/Red</material>
     </gazebo>
 
-    <!--  ########################### -->
-
-
-
 
 
     <xacro:include filename="$(find rover_bot_description)/description/controllers.xacro"/>
-
-
 
     <xacro:include filename="$(find rover_bot_description)/description/sensors/imu.xacro"/>
     <xacro:include filename="$(find rover_bot_description)/description/sensors/lidar.xacro"/>

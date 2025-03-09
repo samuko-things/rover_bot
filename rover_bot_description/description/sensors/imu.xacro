@@ -2,11 +2,6 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="rover_bot">
 
 
-    <!-- <xacro:arg name="imu_visual"   default="true"/> -->
-
-
-  <!-- IMU LINK FRAME -->
-
     <joint name="imu_joint" type="fixed">
         <parent link="chassis_link"/>
         <child link="imu_link"/>

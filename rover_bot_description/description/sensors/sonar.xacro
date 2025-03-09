@@ -2,12 +2,9 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"  name="rover_bot">
 
 
-    <!-- <xacro:arg name="sonar_visual"   default="false"/> -->
     <xacro:property name="deg2rad" value="0.017460317"/>
     <xacro:property name="scan_angle" value="1"/>
 
-
-  <!-- SONAR LINK FRAME -->
 
     <joint name="sonar_joint" type="fixed">
         <parent link="chassis_link"/>
@@ -81,8 +78,6 @@
         </sensor>
     </gazebo>
 
-
-  
 </robot>
 
 
