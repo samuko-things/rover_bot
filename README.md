@@ -19,10 +19,6 @@ the repo or in your ROS2 workspace, build, and source it.
 > ```
 
 ## Create ROS Workspace And Download and Setup mobo_bot Packages
-- install python pynput library for the mobo_bot_teleop
-  ```shell
-  pip3 install pynput
-  ```
   
 - create your <ros_ws> in the home dir. (replace <ros_ws> with your workspace name)
   ```shell
