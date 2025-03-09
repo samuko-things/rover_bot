@@ -1,9 +1,8 @@
 <?xml version="1.0"?>
-<robot name="rover_bot" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
 
 
     <xacro:macro name="box_with_fillet" params="size_x size_y size_z fr material x y z">
-            <!-- logitudinal box -->
             <visual>
                 <origin xyz="${x} ${y} ${z}" rpy="0 0 0"/>
                 <geometry>
@@ -11,7 +10,7 @@
                 </geometry>
                 <material name="${material}"/>
             </visual>
-            <!-- lateral box -->
+
             <visual>
                 <origin xyz="${x} ${y} ${z}" rpy="0 0 0"/>
                 <geometry>
@@ -19,7 +18,7 @@
                 </geometry>
                 <material name="${material}"/>
             </visual>
-            <!-- cylinder1 -->
+
             <visual>
                 <origin xyz="${x+((size_x/2)-fr)} ${y+((size_y/2)-fr)} ${z}" rpy="0 0 0"/>
                 <geometry>
@@ -27,7 +26,7 @@
                 </geometry>
                 <material name="${material}"/>
             </visual>
-            <!-- cylinder2 -->
+
             <visual>
                 <origin xyz="${x+((size_x/2)-fr)} ${y-((size_y/2)-fr)} ${z}" rpy="0 0 0"/>
                 <geometry>
@@ -35,7 +34,7 @@
                 </geometry>
                 <material name="${material}"/>
             </visual>
-            <!-- cylinder3 -->
+
             <visual>
                 <origin xyz="${x-((size_x/2)-fr)} ${y+((size_y/2)-fr)} ${z}" rpy="0 0 0"/>
                 <geometry>
@@ -43,7 +42,7 @@
                 </geometry>
                 <material name="${material}"/>
             </visual>
-            <!-- cylinder4 -->
+            
             <visual>
                 <origin xyz="${x-((size_x/2)-fr)} ${y-((size_y/2)-fr)} ${z}" rpy="0 0 0"/>
                 <geometry>
