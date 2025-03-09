@@ -46,10 +46,13 @@ the repo or in your ROS2 workspace, build, and source it.
   ```
 
 ## Basic Launch
-- to spawn robot in gazebo:
+- to view robot in rviz:
   ```shell
-    ros2 launch rover_bot_description spawn.launch.py
+    ros2 launch rover_bot_description view.launch.py
   ```
+</br>
+</br>
+</br>
 
 ![rover_bot](https://github.com/samuko-things/rover_bot/blob/main/rover_bot_pics1.png)
 - to spawn robot in gazebo:
